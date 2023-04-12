@@ -1,9 +1,8 @@
-/*We’ve curated a set of interesting data sets for you: Top movies, Top countries by population, 
-Solar system objects by size, Marvel characters, Furniture store sales, Earned KA badges, 
-Winston's donut logs, Card game results, and NFL draft picks. 
-Pick one of those data sets or create a data set like that, and use advanced SELECT queries to 
-discover things about the data. What sort of questions might one have about that data, like if 
-they were using it for an app or a business idea? Here are some ideas:
+/*I have created a table containing facts about the solar system. 
+I then used advanced SELECT queries to 
+discover things about the data. 
+
+Some of the questions that someone may have about the data are:
 What are average, max, and min values in the data?
 What about those numbers per category in the data (using HAVING)?
 What ways are there to group the data values that don’t exist yet (using CASE)?
@@ -12,7 +11,6 @@ What interesting ways are there to filter the data (using AND/OR)? */
 /* 
 Solar system objects
 Adapted from: http://en.wikipedia.org/wiki/List_of_Solar_System_objects_by_size
-Collected by: https://www.khanacademy.org/profile/patrick809/programs
 */
 CREATE TABLE solar_system_objects(
   body TEXT
@@ -74,7 +72,6 @@ SELECT body FROM solar_system_objects WHERE type_of_object LIKE "%planet%" AND t
 SELECT AVG(mass) FROM solar_system_objects;
 
 /*Return surface gravity of earth*/
-
 SELECT surface_gravity FROM solar_system_objects WHERE body = "Earth";
 
 /*Return all objects where surface gravity is greater than the surface gravity of the earth*/
